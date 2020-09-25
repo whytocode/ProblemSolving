@@ -36,7 +36,9 @@ public class LeastCommonAncestor {
             return null;
         }
 
-        return Objects.requireNonNullElse(left, right);
+        if(left != null) {
+            return left;
+        } else return right;
     }
 
     public void createSample() {
